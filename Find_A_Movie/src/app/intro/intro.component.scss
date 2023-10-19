@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'capture';
+    src: url('../../assets/Capture_it-webfont.woff') format('woff');
+}
+
+header {
+    position:relative;
+}
+header h1 {
+    color: #86ffd8;
+    text-shadow: 0 0 60px  #86ffd8;
+    font-family: capture;
+    font-size: calc(var(--index) * 9);
+    letter-spacing: calc(var(--index) / 1.8);
+    white-space: nowrap;
+    position: absolute;
+    justify-self: center;
+    z-index: -1;
+    will-change:transform;
+    margin-left:8%;
+}
+.layers {
+    display:grid;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    will-change: transform;
+}
+// .layers::after {
+//     content: '';
+//     width:100%;
+//     height: calc(var(--index) * 15) ;
+//     flex: none;
+//     position: absolute;
+//     background-image: url('../../assets/img/rocks.png');
+// }
+.layer {
+  position: absolute;
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+}
+
+.sky {
+    z-index: -1;
+}
+.background {
+    z-index:0;
+}
