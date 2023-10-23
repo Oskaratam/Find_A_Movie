@@ -7,6 +7,8 @@ import { ContainerComponent } from './container/container.component';
 import { IntroComponent } from './intro/intro.component';
 import { FirstSectionComponent } from './first-section/first-section.component';
 import { OptionCardComponent } from './first-section/option-card/option-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProgressionBarComponent } from './first-section/progression-bar/progression-bar.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { OptionCardComponent } from './first-section/option-card/option-card.com
     ContainerComponent,
     IntroComponent,
     FirstSectionComponent,
-    OptionCardComponent
+    OptionCardComponent,
+    ProgressionBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
