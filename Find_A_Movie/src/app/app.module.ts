@@ -9,6 +9,7 @@ import { FirstSectionComponent } from './first-section/first-section.component';
 import { OptionCardComponent } from './first-section/option-card/option-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProgressionBarComponent } from './first-section/progression-bar/progression-bar.component';
+import { StepIndicatorComponent } from './first-section/progression-bar/step-indicator/step-indicator.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProgressionBarComponent } from './first-section/progression-bar/progres
     IntroComponent,
     FirstSectionComponent,
     OptionCardComponent,
-    ProgressionBarComponent
+    ProgressionBarComponent,
+    StepIndicatorComponent
   ],
   imports: [
     BrowserModule,

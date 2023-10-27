@@ -1,12 +1,12 @@
 <div data-tilt data-tilt-glare data-tilt-max-glare="0.8"  class="relative overflow-hidden shadow-lg max-h-96 w-80 h-96 shadow-gray-700 rounded-xl" #card >
-    <div (click)="infoIsOpened = !infoIsOpened"   class="absolute right-0 z-10 w-12 bg-black rounded-md h-11 markDiv">
+    <div *ngIf="optionDescription != '' && optionDescription != undefined" (click)="infoIsOpened = !infoIsOpened"   class="absolute right-0 z-10 w-12 bg-black rounded-md h-11 markDiv">
       <img  class="absolute p-2 right-1 mark" src="../../../assets/img/mark.png" alt="Exclamation mark">  
     </div>
     <div *ngIf="infoIsOpened === true" @smoothOpen   class="absolute right-0 w-full h-full info">
       <article class="text-base text-center text-white p-9" > {{optionDescription}}  </article>
     </div>
-    <img (click)="steps.nextStep(optionId)"  class="w-full rounded-xl" src={{optionImage}}>
-    <section (click)="steps.nextStep(optionId)" class="relative flex justify-center banner">
+    <img (click)="chooseOption()"  class="w-full rounded-xl" src={{optionImage}}>
+    <section (click)="chooseOption()" class="relative flex justify-center banner">
         <h2 class="relative mt-8 text-4xl tracking-wider text-white align-middle"> {{optionName}} </h2>
     </section>
 </div>

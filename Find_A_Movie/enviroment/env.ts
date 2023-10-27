@@ -1,3 +1,4 @@
 export const env = {
-    apiKey: '0dfd636793d5e618655c211986470723'
+    apiKey: '0dfd636793d5e618655c211986470723',
+    apiToken: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZGZkNjM2NzkzZDVlNjE4NjU1YzIxMTk4NjQ3MDcyMyIsInN1YiI6IjY1MmJiNTUyMDI0ZWM4MDEzYzU3ZjdiZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nKKHmFNLc-JIwBjGxLvbX-GRRIPwh0j3xhcurXAvPpA'
 }

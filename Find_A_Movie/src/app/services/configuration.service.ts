@@ -67,33 +67,89 @@ export class ConfigurationService {
       "name": "70s",
       "id": ['1970-01-01', '1979-12-30'],
       "imgSrc": "../../assets/periodImages/70s.jpg",
+      "description": "In the 1970s, the film industry continued to thrive by doing what television could not: telling stories that were more complicated, violent, frightening, or sexy than what could be shown to families sitting at home. Two contrasting trends in movie-making were present in the 1970s."
     },
     {
       "name": "80s",
       "id": ['1980-01-01', '1989-12-30'],
       "imgSrc": "../../assets/periodImages/80s.jpg",
+      "description": "The period was when 'high concept' films gained popularity, where films were expected to be easily marketable and understandable. Therefore, they had short cinematic plots that could be summarized in one or two sentences. The modern Hollywood blockbuster is the most popular film format from the 1980s."
     },
     {
       "name": "90s",
       "id": ['1990-01-01', '1999-12-30'],
       "imgSrc": "../../assets/periodImages/90s.jpg",
+      "description": "The 1990s was a decade where pop culture took flight, we all made some Friends, dance moves were born and fast-food got even bigger.It was a time of mindblowing innovation, not just in terms of special effects but the kind of stories major studios felt comfortable telling."
     },
     {
       "name": "00s",
       "id": ['2000-01-01', '2009-12-30'],
       "imgSrc": "../../assets/periodImages/00s.jpg",
+      "description": "The 2000s was an era of entertainment best characterized by over-the-top comedy, fun, action-packed popcorn flicks, and optimistic family movies. Not only did this era contain some of the most enduringly popular superhero movies, but it also enjoyed a fun streak of adventure movies and successful animated films",
     },
     {
-      "name": "10s",
+      "name": "2010s",
       "id": ['2010-01-01', '2019-12-30'],
       "imgSrc": "../../assets/periodImages/10s.jpg",
+      "description": "The decade of the 2010s in film involved many significant developments in the motion picture industry as Disney towered all over its competitors.Film series adaptations of popular young adult fiction novels became more prevalent",
     },
     {
-      "name": "20s",
+      "name": "2020s",
       "id": ['2019-01-01', '2040-12-30'],
       "imgSrc": "../../assets/periodImages/20s.jpg",
+      "description": "",
     }
   ]
+
+  "includeAdult" : Option[] = [
+    {
+    "name": "18+",
+    "id": 2,
+    "imgSrc": '../../assets/ageImages/adult.jpg',
+    },
+    {
+    "name": "12+",
+    "id": 1,
+    "imgSrc": '../../assets/ageImages/teens.jpeg',
+    },
+    {
+      "name": "0+",
+      "id": 0,
+      "imgSrc": '../../assets/ageImages/kids.jpeg',
+    }
+  ]
+
+  "countries": Option[] = [
+    {
+      "name": "Europe",
+      "id": ["FR|IT|UA|PL|NL|NO|ES|DE|SE|GR|AT|BE|BG|DK|PT|RS|HU|CH|LV|CZ|EE|SK"],
+      "imgSrc": '',
+     },
+    
+    {
+      "name": "America",
+      "id": ["US|AR|BR|CA|CL|MX"],
+      "imgSrc": "",
+    },
+    {
+      "name": "Asia",
+      "id": ["ID|IN|JP|KR|TW"],
+      "imgSrc": ''
+    },
+    {
+      "name": "USA",
+      "id": ["US"],
+      "imgSrc": '',
+    },
+    {
+      "name": "Great Britain",
+      "id": ["GB"],
+      "imgSrc": ''
+    },
+    
+  ]
+
+
 
   constructor() { }
 }
