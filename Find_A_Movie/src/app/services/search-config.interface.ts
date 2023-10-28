@@ -1,9 +1,10 @@
 export interface SearchConfig {
-    movieId: string,
+    genreId: string,
     gteDate : string,
     lteDate : string,
     includeAdult : boolean,
-    keyword ?: number
+    keyword ?: number,
+    originCountry : string,
 }
 
 

@@ -35,19 +35,27 @@ export class AppStepsService implements OnInit {
 
   //Id is the data that goes to a movie api
   nextStep(id : number | string[]) {
-    if(this.currentStep < this.totalSteps) {
-      this.currentStep += 1;
-      this.selectorType = this.stepsConfig[this.currentStep];
-      this.findMovie.pickingResults.push(id);
-      console.log(this.findMovie.pickingResults)
+    if(this.currentStep <= this.totalSteps) {
+      if(this.currentStep == this.totalSteps) { 
+        this.findMovie.pickingResults.push(id);
+        this.currentStep += 1;
+        this.findMovie.findMovie();
+       } else {
+        this.currentStep += 1;
+        this.selectorType = this.stepsConfig[this.currentStep];
+        this.findMovie.pickingResults.push(id);
+        console.log(this.findMovie.pickingResults)
+       }
+      
     }
   }
 
   previousStep() {
     if(this.currentStep > 1) {
+      this.findMovie.pickingResults.pop();
+      console.log(this.findMovie.pickingResults)
       this.currentStep -= 1;
       this.selectorType = this.stepsConfig[this.currentStep];
-      this.findMovie.pickingResults.pop();
     }
   }
   ngOnInit(): void {

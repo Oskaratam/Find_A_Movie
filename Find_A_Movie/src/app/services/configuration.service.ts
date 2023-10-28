@@ -122,7 +122,7 @@ export class ConfigurationService {
   "countries": Option[] = [
     {
       "name": "Europe",
-      "id": ["FR|IT|UA|PL|NL|NO|ES|DE|SE|GR|AT|BE|BG|DK|PT|RS|HU|CH|LV|CZ|EE|SK"],
+      "id": ["FR|IT|UA|PL|NL|IE|NO|ES|DE|SE|GR|AT|BE|BG|DK|PT|RS|HU|CH|LV|CZ|EE|SK"],
       "imgSrc": '',
      },
     
@@ -146,6 +146,11 @@ export class ConfigurationService {
       "id": ["GB"],
       "imgSrc": ''
     },
+    {
+      "name": "Africa",
+      "id": ["ZA|ZM|ZW|UG|NG|NI|MG|MA"],
+      "imgSrc": '',
+    }
     
   ]
 
