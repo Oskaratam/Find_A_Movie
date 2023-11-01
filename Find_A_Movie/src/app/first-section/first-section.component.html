@@ -2,9 +2,10 @@
     <img class="cave" src="../../assets/img/cave2.jpg">
     <button class="w-20 h-20 bg-white" (click)="previousStep()">BACK</button>
     <fam-progression-bar></fam-progression-bar>
-    <div data-scroll data-scroll-repeat="true" data-scroll-class="optionsOpened"   class="grid w-4/6 gap-20 pl-6 ml-32 mr-auto max-h-96">
+    <div *ngIf="steps.currentStep < 5" data-scroll data-scroll-repeat="true" data-scroll-class="optionsOpened"   class="grid w-4/6 gap-20 pl-6 ml-32 mr-auto max-h-96">
         <fam-option-card *ngFor="let option of steps.selectorType" [optionId]="option.id"  [optionName]="option.name" [optionImage]="option.imgSrc" [optionDescription]="option.description"> </fam-option-card>
     </div>
+    <fam-results *ngIf="steps.currentStep >= 5"></fam-results>
 </section>
 
 

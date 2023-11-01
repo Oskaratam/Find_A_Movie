@@ -1,0 +1,12 @@
+<h1>THIS IS A RESULT COMPONENT</h1>
+<div class="mt-48 ml-5 overflow-hidden bg-transparent background rounded-xl">
+    <div *ngIf="results">
+        <div class="h-24 border-white max-h-24 filmBox" [routerLink]="['description', film.id]" *ngFor="let film of results.results.slice(0, 12); index as i">
+            <h2 class="p-5 ml-5 text-4xl text-white">{{i + 1}}. {{film.title}}</h2>
+        </div>
+    </div>
+
+    <ng-template *ngIf="results == []">
+        <p class="text-xl text-green-500">NO FILMS FOUND</p>
+    </ng-template>
+</div>

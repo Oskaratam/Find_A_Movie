@@ -12,7 +12,7 @@ import { LightIndicatorsService } from '../services/light-indicators.service';
   templateUrl: './first-section.component.html',
   styleUrls: ['./first-section.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [ProgressionBarComponent]
+  providers: [ ProgressionBarComponent ]
 })
 export class FirstSectionComponent implements OnInit, AfterViewInit {
 

@@ -18,13 +18,16 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void { 
-    
+    window.addEventListener('scroll', e => {
+      document.body.style.cssText += `--scrollTop: ${window.scrollY + 100}px`
+    })
   }
 
   ngAfterViewInit() {
     const element: any = document.querySelector('[data-scroll-container]');
-    console.log(this.scrollContent)
+    console.log(this.scrollContent);
 
+    
     this.scroll = new LocomotiveScroll({
       el: element,
       smooth: true,

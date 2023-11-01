@@ -1,0 +1,14 @@
+
+:root{
+
+}
+.backScreen {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 400vh;
+}
+
+.descriptionBox {
+    top: var(--scrollTop);
+    height: 45rem;
+}

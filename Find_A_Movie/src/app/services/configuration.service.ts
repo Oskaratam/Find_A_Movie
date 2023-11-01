@@ -123,33 +123,33 @@ export class ConfigurationService {
     {
       "name": "Europe",
       "id": ["FR|IT|UA|PL|NL|IE|NO|ES|DE|SE|GR|AT|BE|BG|DK|PT|RS|HU|CH|LV|CZ|EE|SK"],
-      "imgSrc": '',
+      "imgSrc": '../../assets/regionImages/europe.png',
      },
     
     {
       "name": "America",
       "id": ["US|AR|BR|CA|CL|MX"],
-      "imgSrc": "",
+      "imgSrc": '../../assets/regionImages/america.png',
     },
     {
       "name": "Asia",
       "id": ["ID|IN|JP|KR|TW"],
-      "imgSrc": ''
+      "imgSrc": '../../assets/regionImages/japan.png'
     },
     {
       "name": "USA",
       "id": ["US"],
-      "imgSrc": '',
+      "imgSrc": '../../assets/regionImages/usa.jfif',
     },
     {
       "name": "Great Britain",
       "id": ["GB"],
-      "imgSrc": ''
+      "imgSrc": '../../assets/regionImages/gbr.jpg'
     },
     {
       "name": "Africa",
       "id": ["ZA|ZM|ZW|UG|NG|NI|MG|MA"],
-      "imgSrc": '',
+      "imgSrc": '../../assets/regionImages/africa.png',
     }
     
   ]

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,10 @@ import { OptionCardComponent } from './first-section/option-card/option-card.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProgressionBarComponent } from './first-section/progression-bar/progression-bar.component';
 import { StepIndicatorComponent } from './first-section/progression-bar/step-indicator/step-indicator.component';
+import { ResultsComponent } from './first-section/results/results.component';
+import { TMDbRequestsInterceptor } from './services/tmdb-requests.interceptor';
+import { DescriptionComponent } from './first-section/results/description/description.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { StepIndicatorComponent } from './first-section/progression-bar/step-ind
     FirstSectionComponent,
     OptionCardComponent,
     ProgressionBarComponent,
-    StepIndicatorComponent
+    StepIndicatorComponent,
+    ResultsComponent,
+    DescriptionComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,13 @@ import { StepIndicatorComponent } from './first-section/progression-bar/step-ind
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TMDbRequestsInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

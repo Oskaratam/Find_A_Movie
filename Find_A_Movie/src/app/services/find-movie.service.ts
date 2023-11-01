@@ -64,19 +64,16 @@ export class FindMovieService {
     return baseUrl;
   }
 
+  responseFilms !: {};
+
   findMovie(){
     this.configureSearchData();
     const url = this.configureSearchUrl(this.searchConfig);
-    const requestHeaders = new HttpHeaders({Authorization: `Bearer ${env.apiToken}`, accept: 'application/json'});
-    let responseFilms;
-    console.log(this.searchConfig)
+    // const requestHeaders = new HttpHeaders({Authorization: `Bearer ${env.apiToken}`, accept: 'application/json'});
 
-    this.getMovies$ = this.http.get(url, {
-      headers : requestHeaders
-    })
-    this.getMovies$.subscribe(response => {responseFilms = response;
-    console.log(response)});
-    console.log(responseFilms)
+    this.getMovies$ = this.http.get(url)
+    this.getMovies$.subscribe(response => { this.responseFilms = response;
+    });
   }
 
   
