@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { ConfigurationService } from '../services/configuration.service';
 import { Option } from '../services/option.interface';
 import { AppStepsService } from '../services/app-steps.service';
@@ -19,10 +19,14 @@ export class FirstSectionComponent implements OnInit, AfterViewInit {
   constructor(public steps: AppStepsService, private light: LightIndicatorsService) { }
 
 
+  @ViewChild('optionsBoard')optionsBoard !: ElementRef;
 
   previousStep() {
     this.steps.previousStep();
     this.light.shutIndicators();
+    setTimeout(() => {const optionsBoard = this.optionsBoard;
+      optionsBoard.nativeElement.classList.add('optionsOpened')
+    }, 100);
   }
 
 

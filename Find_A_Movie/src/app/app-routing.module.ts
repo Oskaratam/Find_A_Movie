@@ -5,7 +5,7 @@ import { DescriptionComponent } from './first-section/results/description/descri
 
 const routes: Routes = [
   {
-    path: 'description/:movieId', component: DescriptionComponent
+    path: 'description/:movieId', component: DescriptionComponent, data: { animation: "topSlide" }
   },
 ];
 

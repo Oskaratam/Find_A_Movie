@@ -12,6 +12,8 @@ const enterTransition = transition(':enter', [
   style({ width: "0%", height: "0%" }),
   animate('0.2s ease-in', style({ width: "100%", height: "100%", }))
 ]);
+
+
 // const closeTransition = transition(':leave', [
 //   style({ width: "100%", height: "100%" }),
 //   animate('0.2s ease-in', style({ width: 0, height: 0 }))
@@ -24,7 +26,7 @@ const SmoothOpen = trigger('smoothOpen', [enterTransition]);
   selector: 'fam-option-card',
   templateUrl: './option-card.component.html',
   styleUrls: ['./option-card.component.scss'],
-  animations: [SmoothOpen],
+  animations: [SmoothOpen], 
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [ProgressionBarComponent]
 })

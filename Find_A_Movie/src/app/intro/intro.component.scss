@@ -27,14 +27,15 @@ header h1 {
     overflow: hidden;
     will-change: transform;
 }
-// .layers::after {
-//     content: '';
-//     width:100%;
-//     height: calc(var(--index) * 15) ;
-//     flex: none;
-//     position: absolute;
-//     background-image: url('../../assets/img/rocks.png');
-// }
+.layers::after {
+    content: '';
+    width:100%;
+    top: 88vh;
+    height: 12vh ;
+    flex: none;
+    position: absolute;
+    background-image: url('../../assets/img/rocks.png');
+}
 .layer {
   position: absolute;
   object-fit: cover;

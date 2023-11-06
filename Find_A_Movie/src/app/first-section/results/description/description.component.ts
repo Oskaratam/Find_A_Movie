@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, ChangeDetectorRef, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable, map } from 'rxjs';
+import { Observable, Observer, Subject, Subscription, map } from 'rxjs';
+import { FilmDataService } from '../film-data.service';
+
 
 @Component({
   selector: 'fam-description',
@@ -8,27 +10,32 @@ import { Observable, map } from 'rxjs';
   styleUrls: ['./description.component.scss']
 })
 export class DescriptionComponent 
-implements OnInit {
+implements OnInit, OnDestroy {
 
 
   movieId$ !: Observable<number>;
   movieId !: number;
 
-  constructor(private router: ActivatedRoute){
+
+  constructor(private router: ActivatedRoute, private movieData: FilmDataService) {
   }
 
-  goToBaseUrl () {
-    window.location.href = 'http://localhost:4200' 
-  }
+  movieData$ : Subject<any> = this.movieData.data$;
 
+  movieDataObject !: any;
+
+  subscriptionForMovieData !: Subscription;
+
+  configureImageUrl() : string {
+    return `https://image.tmdb.org/t/p/w500${this.movieDataObject['poster_path']}`
+  }
 
   ngOnInit(): void {
-    this.movieId$ = this.router.params.pipe(map(params => params['movieId']));
-    this.movieId$.subscribe(id => {
-      this.movieId = id;
-    })
+    this.subscriptionForMovieData = this.movieData$.subscribe(value => this.movieDataObject = value)
+  }
 
-
+  ngOnDestroy(): void {
+    this.subscriptionForMovieData.unsubscribe();
   }
 
 

@@ -1,7 +1,4 @@
 
-:root{
-
-}
 .backScreen {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
@@ -9,6 +6,13 @@
 }
 
 .descriptionBox {
-    top: var(--scrollTop);
-    height: 45rem;
+    top: calc(var(--scrollTop) + var(--index) * 14.5);
+    height: 46.85rem;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-family: 'capture';
 }
