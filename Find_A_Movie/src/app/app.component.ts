@@ -2,7 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import LocomotiveScroll from 'locomotive-scroll';
 import { ResizeObserver } from '@juggle/resize-observer';
 import { Route, RouterOutlet } from '@angular/router';
-import { fader, topSlide } from './route-animations';
+import { topSlide } from './route-animations';
+// import { fader, topSlide } from './route-animations';
 
 
 @Component({
@@ -10,8 +11,7 @@ import { fader, topSlide } from './route-animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    topSlide,
-    fader
+    topSlide
   ]
 })
 export class AppComponent implements OnInit {

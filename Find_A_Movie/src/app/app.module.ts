@@ -30,9 +30,9 @@ import { DescriptionComponent } from './first-section/results/description/descri
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
   ],
   providers: [
     {

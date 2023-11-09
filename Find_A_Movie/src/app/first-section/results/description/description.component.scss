@@ -5,8 +5,16 @@
     height: 400vh;
 }
 
+.fakeDiv {
+    width: 100vw;
+    height: 400vh;   
+}
+
 .descriptionBox {
-    top: calc(var(--scrollTop) + var(--index) * 14.5);
+    top: calc(var(--scrollTop) + var(--index) * 14.3);
+    border: none;
+    border-top: 0.3vh #069266 solid;
+    border-bottom: 0.3vh #069266 solid;
     height: 46.85rem;
     left: 50%;
     right: 50%;

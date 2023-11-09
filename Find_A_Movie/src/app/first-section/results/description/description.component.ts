@@ -20,6 +20,11 @@ implements OnInit, OnDestroy {
   constructor(private router: ActivatedRoute, private movieData: FilmDataService) {
   }
 
+  stopNavigation(event: Event){
+    console.log(event)
+    event.preventDefault();
+  }
+
   movieData$ : Subject<any> = this.movieData.data$;
 
   movieDataObject !: any;

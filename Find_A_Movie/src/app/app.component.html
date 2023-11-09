@@ -1,7 +1,7 @@
 
 <div #scrollContent data-scroll-direction="vertical" data-scroll-container>
-    <div [@routeAnimations]="prepareRoute(outlet)">
-        <router-outlet #outlet = "outlet"></router-outlet>
+    <div class="relative" [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet class="relative" #outlet = "outlet"></router-outlet>
     </div>
     <fam-container>
         <fam-intro></fam-intro><!---
