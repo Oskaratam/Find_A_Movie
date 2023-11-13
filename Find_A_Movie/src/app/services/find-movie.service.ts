@@ -36,9 +36,11 @@ export class FindMovieService {
           switch(this.pickingResults[2]){
             case 2:
               this.searchConfig.includeAdult = true;
+              delete this.searchConfig['keyword'];
               break;
             case 1:
               this.searchConfig.includeAdult = false;
+              delete this.searchConfig['keyword'];
               break;
             case 0:
               this.searchConfig.includeAdult = false;

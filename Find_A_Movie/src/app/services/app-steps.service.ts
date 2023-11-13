@@ -44,7 +44,7 @@ export class AppStepsService implements OnInit {
         this.currentStep += 1;
         this.selectorType = this.stepsConfig[this.currentStep];
         this.findMovie.pickingResults.push(id);
-        console.log(this.findMovie.pickingResults)
+        console.log(this.findMovie.pickingResults);
        }
       
     }
@@ -52,6 +52,9 @@ export class AppStepsService implements OnInit {
 
   previousStep() {
     if(this.currentStep > 1) {
+      if(this.currentStep == 2){
+        this.findMovie.pickingResults = [];
+      }
       this.findMovie.pickingResults.pop();
       console.log(this.findMovie.pickingResults)
       this.currentStep -= 1;
