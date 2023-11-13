@@ -26,6 +26,7 @@ export class ResultsComponent implements OnInit {
   }
 
   results: any;
+  resultsLength : number | null = null; 
 
   passData(film: any) {
     console.log(film);
@@ -42,6 +43,8 @@ export class ResultsComponent implements OnInit {
     setTimeout(() => {
       this.results = this.findMovies.responseFilms;
       console.log(this.results.results);
+      this.resultsLength = this.results.results.length;
+      console.log(this.resultsLength)
       this.cdr.detectChanges();
     }, 1500);
   }

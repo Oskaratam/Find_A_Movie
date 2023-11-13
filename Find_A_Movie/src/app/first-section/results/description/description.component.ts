@@ -2,6 +2,7 @@ import { Component, OnDestroy, ChangeDetectorRef, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Observer, Subject, Subscription, map } from 'rxjs';
 import { FilmDataService } from '../film-data.service';
+import { FindTrailerService } from 'src/app/services/find-trailer.service';
 
 
 @Component({
@@ -15,9 +16,10 @@ implements OnInit, OnDestroy {
 
   movieId$ !: Observable<number>;
   movieId !: number;
+  playIsClicked : boolean = false
 
 
-  constructor(private router: ActivatedRoute, private movieData: FilmDataService) {
+  constructor(private router: ActivatedRoute, private movieData: FilmDataService,  public trailerService : FindTrailerService) {
   }
 
   stopNavigation(event: Event){

@@ -28,18 +28,6 @@ export const topSlide = trigger('routeAnimations', [
         ])
     ])
 
-// export const fader = trigger('routeAnimations', [
-//     transition('* <=> *', [
-//         query(':enter', [
-//             style({ opacity: '0%' })
-//         ]),
-//         query(':enter', [
-//             animate('0.5s ease-in', style({ opacity: "100%" }))
-//         ])
-//     ])
-// ])
-
-
 
 
 

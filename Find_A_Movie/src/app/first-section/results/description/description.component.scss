@@ -21,6 +21,21 @@
     transform: translate(-50%, -50%);
 }
 
-h1 {
-    font-family: 'capture';
+.ratingSection, h1 {
+    font-family: 'capture'
 }
+
+
+.rating::after {
+    content: '';
+    background: url("../../../../assets/img/star.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display:inline-block;
+    margin-left: 0.5vh;
+    width: 4rem;
+    height: 2.5rem;
+}
+
+

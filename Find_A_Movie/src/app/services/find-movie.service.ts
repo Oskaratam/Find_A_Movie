@@ -52,15 +52,15 @@ export class FindMovieService {
       }
     }
   }
-
+  
   configureSearchUrl(config: SearchConfig) {
-    let baseUrl = "https://api.themoviedb.org/3/discover/movie?include_video=false&language=en-US&page=1&sort_by=popularity.desc";
+    let baseUrl = "https://api.themoviedb.org/3/discover/movie?include_video=true&language=en-US&page=1&sort_by=popularity.desc";
     baseUrl += `&with_genres=${config.genreId}`;
     baseUrl += `&release_date.gte=${config.gteDate}`;
     baseUrl += `&release_date.lte=${config.lteDate}`;
     baseUrl += `&include_adult=${config.includeAdult}`;
+    baseUrl += `&with_origin_country=${config.originCountry}`;
     if(config.keyword){baseUrl += `&with_keywords=${config.keyword}`}
-    baseUrl += `&with_origin_country=${config.originCountry}`
     return baseUrl;
   }
 
