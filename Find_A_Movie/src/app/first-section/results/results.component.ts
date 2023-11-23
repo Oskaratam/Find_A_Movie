@@ -26,7 +26,7 @@ export class ResultsComponent implements OnInit {
   }
 
   results: any;
-  resultsLength : number | null = null; 
+  resultsLength !: number; 
 
   passData(film: any) {
     console.log(film);

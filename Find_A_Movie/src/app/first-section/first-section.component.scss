@@ -6,6 +6,27 @@
     width: 100vw;
 }
 
+
+.section1::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+    height: 10px; /* Adjust the height for horizontal scrollbars */
+}
+.section1::-webkit-scrollbar-thumb {
+    background-color: rgb(106, 247, 235);/* Dark grey color for the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+    border: 2px solid #2e2e2e; /* Dark border for contrast */
+}
+
+.section1::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent track */
+    border-radius: 5px;
+}
+
+.section1::-webkit-scrollbar-thumb:hover {
+    background-color: #3b3b3b; /* Slightly lighter grey when hovered */
+}
+
+
 .cave {
     position: absolute;
     z-index: -1;
@@ -20,7 +41,32 @@ div {
     transition: margin-top ease-in-out 800ms;
 }
 
+@media (max-width: 1200px) {
+    div {
+        margin-top: 20rem;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+}
+@media (max-width: 880px) {
+    div {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        transition: margin-top ease-in-out 800ms;
+    }
+}
+@media (max-width: 750px) {
+    div {
+        margin-top: 20rem;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+}
+
 .optionsOpened {
     margin-top: 12rem;
+}
+
+@media (max-width: 600px) {
+    .optionsOpened{ 
+       margin-top : 5rem; 
+    }
 }
 

@@ -25,7 +25,6 @@ export class FindTrailerService {
       const youtubeUrl = `https://www.youtube.com/embed/${trailerInfo.results[0].key}`;
       this.currentYoutubeTrailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(youtubeUrl);
       this.movieId = this.activatedRoute.snapshot.paramMap.get('movieId');
-      // this.router.navigate(['description', movieId, 'trailer'])
     }
     )
   }

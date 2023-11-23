@@ -1,4 +1,21 @@
+div::-webkit-scrollbar {
+    width: 1vw; /* Adjust the width of the scrollbar */
+    height: 2vh; /* Adjust the height for horizontal scrollbars */
+}
+div::-webkit-scrollbar-thumb {
+    background-color: rgb(74, 77, 77);/* Dark grey color for the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+    border: 2px solid #2e2e2e; /* Dark border for contrast */
+}
 
+div::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent track */
+    border-radius: 5px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+    background-color:#86ffd8; /* Slightly lighter grey when hovered */
+}
 .backScreen {
     background-color: rgba(0, 0, 0, 0.8);
     width: 100vw;
@@ -9,9 +26,12 @@
     width: 100vw;
     height: 400vh;   
 }
+.textDiv ::-webkit-scrollbar {
+    display: none;
+  }
 
 .descriptionBox {
-    top: calc(var(--scrollTop) + var(--index) * 14.3);
+    top: calc(var(--scrollTop) + var(--index) * 15);
     border: none;
     border-top: 0.3vh #069266 solid;
     border-bottom: 0.3vh #069266 solid;
@@ -20,7 +40,34 @@
     right: 50%;
     transform: translate(-50%, -50%);
 }
+@media (max-width: 1500px) {
+    .descriptionBox {
+        height: 40rem;
+    }
+    
+}
+@media (max-width: 1200px) {
+    .descriptionBox {
+        height: 33rem;
+    }
+    
+}
 
+@media (max-width: 850px) {
+    .descriptionBox {
+        height: 26rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .descriptionBox {
+        height: 16rem;
+    }
+    .overviewText {
+        font-size: 0.5rem;
+        line-height: 0.85rem
+    }
+}
 .ratingSection, h1 {
     font-family: 'capture'
 }
@@ -38,4 +85,19 @@
     height: 2.5rem;
 }
 
+@media (max-width: 1320px) {
+    .rating::after {
+        width: 3rem;
+        height: 1.5rem;
+     }
+
+}
+
+@media (max-width: 700px) {
+    .rating::after {
+        width: 0rem;
+        height: 0rem;
+     }
+
+}
 

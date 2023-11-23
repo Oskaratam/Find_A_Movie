@@ -56,7 +56,7 @@ export class ConfigurationService {
     },
     {
       "id": 878,
-      "name": "Science Fiction",
+      "name": "Fiction",
       "imgSrc": "../../assets/genreImages/science.jpg",
       "description": "Science fiction is a genre of speculative fiction, which typically deals with imaginative and futuristic concepts such as advanced science and technology, space exploration, time travel, parallel universes, and extraterrestrial life. Science fiction can trace its roots to ancient mythology."
     },

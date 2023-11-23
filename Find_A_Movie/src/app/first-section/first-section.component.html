@@ -1,9 +1,9 @@
 <section class="relative section1">
     <img class="cave" src="../../assets/img/cave2.jpg">
-    <img class="absolute w-40 h-40 hover:cursor-pointer top-3 left-5" src='../../assets/img/arrow.png'(click)="previousStep()">
+    <img class="absolute w-40 h-40 sm:w-20 sm:h-20 lg:top-10 lg:left-3 md:w-32 md:h-32 hover:cursor-pointer sm:top-1 top-3 left-5" src='../../assets/img/arrow.png'(click)="previousStep()">
     <fam-progression-bar></fam-progression-bar>
-    <div *ngIf="steps.currentStep < 5" data-scroll data-scroll-class="optionsOpened"   class="grid w-3/5 gap-20 pl-6 ml-64 mr-0 max-h-96" #optionsBoard>
-        <fam-option-card *ngFor="let option of steps.selectorType" [optionId]="option.id"  [optionName]="option.name" [optionImage]="option.imgSrc" [optionDescription]="option.description"> </fam-option-card>
+    <div *ngIf="steps.currentStep < 5" data-scroll data-scroll-class="optionsOpened"   class="grid w-3/5 grid-cols-3 gap-20 pl-6 ml-64 mr-0 sm:gap-4 sm2:ml-20 xl:ml-40 lg:ml-32 xl:gap-8 max-h-96" #optionsBoard>
+        <fam-option-card class="w-full h-full" *ngFor="let option of steps.selectorType" [optionId]="option.id"  [optionName]="option.name" [optionImage]="option.imgSrc" [optionDescription]="option.description"> </fam-option-card>
     </div>
     <fam-results *ngIf="steps.currentStep >= 5"></fam-results>
 </section>
